@@ -44,28 +44,28 @@
                             </aside>
 
                             <aside class="large-card" data-index="'.$index.'">
-                                <div>
-                                    <div>
-                                        <h1>'.$scientist['firstname'].' '.$scientist['lastname'].' </h1>
-                                        <p>'.$scientist['bio'].'<a href="">Wikipedia</a>
-                                        </p>
+                                <div class="bio-info">
+                                    <div class="names-wrapper">
+                                        <h1 class="names">'.$scientist['firstname'].' '.$scientist['lastname'].' </h1>
+                                        <p class="bio">'.$scientist['bio'].'</p>
+                                        <p class="link-wrapper"><a href="'.$scientist['weblink'].'" target="_blank">Learn more on wikipedia</a></p>
                                     </div>
 
-                                    <div>
+                                    <div class="profile-img">
                                         <img src="'.$scientist['avatar'].'" alt="'.$scientist['bio'].'"/>
                                     </div>
                                 </div>
 
-                                <div>
-                                    <p>First Name: '.$scientist['firstname'].'</p>
-                                    <p>Last Name: '.$scientist['lastname'].'</p>
-                                    <p>Born in: '.$scientist['birthday'].'</p>
-                                    <p>Died: '.$scientist['death'].'</p>
-                                    <p>Age: '.$scientist['death'] - $scientist['birthday'].'</p>
+                                <div class="personal-info">
+                                    <p>First Name: <span> '.$scientist['firstname'].'</span></p>
+                                    <p>Last Name: <span>'.$scientist['lastname'].'</span></p>
+                                    <p>Born in: <span>'.$scientist['birthday'].'</span></p>
+                                    <p>Died: <span>'.$scientist['death'].'</span></p>
+                                    <p>Age: <span>'.$scientist['death'] - $scientist['birthday'].'</span></p>
                                 </div>
 
                                <button class="close-btn">
-                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="18" height="18" class="main-grid-item-icon" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="30" height="30" class="main-grid-item-icon" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
                                         <line x1="18" x2="6" y1="6" y2="18" />
                                         <line x1="6" x2="18" y1="6" y2="18" />
                                     </svg>

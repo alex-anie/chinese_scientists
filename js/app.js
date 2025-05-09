@@ -1,5 +1,6 @@
 const miniCards = document.querySelectorAll('.mini-card');
 const largeCards = document.querySelectorAll('.large-card');
+const closeButton = document.querySelectorAll('.close-btn');
 
 miniCards.forEach(card => {
     card.addEventListener('click', ()=>{
@@ -15,12 +16,34 @@ miniCards.forEach(card => {
         const selectedCard = document.querySelector('.large-card[data-index="'+index+'"]');
 
         if(selectedCard){
-            selectedCard.style.display = 'block';
+            selectedCard.style.display = 'flex';
+
+            card.parentNode.insertBefore(selectedCard, card.nextSibling);
+
             // Optionally scroll into view
             selectedCard.scrollIntoView({behavior: 'smooth'})
         }
 
         // add active class
         card.classList.add('active'); 
+    })
+})
+
+// remove large-card element
+// closeButton.addEventListener('click', ()=>{
+//     // const parentEL = document.querySelector('.card-container');
+//     // parentEL.removeChild(document.querySelector('.large-card'));
+//    document.querySelector('.large-card').style.display = 'none';
+// })
+
+closeButton.forEach(btn =>{
+    btn.addEventListener('click', ()=>{
+        // console.log(btn);
+        const parentEL = btn.parentNode;
+        parentEL.style.display = 'none';
+        console.log(parentEL)
+
+         // Remove all active class
+        miniCards.forEach(mc => {mc.classList.remove('active')})
     })
 })

@@ -109,10 +109,89 @@ a {
 /* LARGE CARD */
 .large-card {
     display: none;
+    position: relative;
+    width: 100%;
+    height: 18em;
+    grid-column: 1 / -1;
     margin-top: 1rem;
-    border: 1px solid #ccc;
+    margin-top: 1rem;
+    border-top: 1px solid #ccc;
+    border-bottom: 1px solid #ccc;
     padding: 1rem;
     background-color: #fff;
+}
+
+.large-card .bio-info {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    justify-content: space-between;
+    width: 70%;
+}
+
+.large-card .bio-info .names-wrapper {
+    grid-column: span 2;
+}
+
+
+.large-card .bio-info .names {
+    font-size: 1.6em;
+    font-weight: lighter;
+    margin-bottom: 20px;
+}
+
+
+.large-card .bio-info .bio {
+    color: #505050;
+    padding-right:1em;
+    line-height: 1.5em;
+}
+
+.large-card .bio-info .link-wrapper {
+   margin-top: 1em;
+}
+
+.large-card .bio-info .link-wrapper a {
+    color: blue;
+}
+
+.large-card .bio-info .link-wrapper a:hover {
+    text-decoration: underline;
+}
+
+/* img */
+.large-card .bio-info .profile-img {
+    height: 15em;
+    grid-column: span 1;
+}
+
+.large-card .bio-info .profile-img img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position:top;
+}
+
+.large-card .personal-info p{
+    font-weight: bold;
+    font-size: 1.2em;
+    margin-left: 10px;
+    line-height: 30px;
+} 
+
+.large-card .personal-info span {
+    font-weight: lighter;
+}
+
+.close-btn {
+    position: absolute;
+    right: 2em;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+.close-btn svg:hover {
+    stroke: #797777;
 }
 
 /* active class */
@@ -121,4 +200,3 @@ a {
     color: white;
 }
 
-/*  */
