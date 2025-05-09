@@ -29,13 +29,8 @@ miniCards.forEach(card => {
     })
 })
 
-// remove large-card element
-// closeButton.addEventListener('click', ()=>{
-//     // const parentEL = document.querySelector('.card-container');
-//     // parentEL.removeChild(document.querySelector('.large-card'));
-//    document.querySelector('.large-card').style.display = 'none';
-// })
 
+// add the close button
 closeButton.forEach(btn =>{
     btn.addEventListener('click', ()=>{
         // console.log(btn);
