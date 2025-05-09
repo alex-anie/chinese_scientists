@@ -22,9 +22,9 @@
         <article>
             <section class="card-container">
                 <?php
-                    foreach($chinese_scientists as $scientist){
+                    foreach($chinese_scientists as $index => $scientist){
                         echo '
-                            <aside class="mini-card">
+                            <aside class="mini-card" data-index="'.$index.'">
                                 <div class="mini-profile-wrapper">
                                     <img src="'.$scientist['avatar'].'" alt="'.$scientist['bio'].'" class="mini-img">
                                 </div>
@@ -43,12 +43,41 @@
                                 </div>
                             </aside>
 
-                           
+                            <aside class="large-card" data-index="'.$index.'">
+                                <div>
+                                    <div>
+                                        <h1>'.$scientist['firstname'].' '.$scientist['lastname'].' </h1>
+                                        <p>'.$scientist['bio'].'<a href="">Wikipedia</a>
+                                        </p>
+                                    </div>
+
+                                    <div>
+                                        <img src="'.$scientist['avatar'].'" alt="'.$scientist['bio'].'"/>
+                                    </div>
+                                </div>
+
+                                <div>
+                                    <p>First Name: '.$scientist['firstname'].'</p>
+                                    <p>Last Name: '.$scientist['lastname'].'</p>
+                                    <p>Born in: '.$scientist['birthday'].'</p>
+                                    <p>Died: '.$scientist['death'].'</p>
+                                    <p>Age: '.$scientist['death'] - $scientist['birthday'].'</p>
+                                </div>
+
+                               <button class="close-btn">
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="18" height="18" class="main-grid-item-icon" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
+                                        <line x1="18" x2="6" y1="6" y2="18" />
+                                        <line x1="6" x2="18" y1="6" y2="18" />
+                                    </svg>
+                               </button>
+                            </aside>
                         ';
                     }
                 ?>
             </section>
         </article>
     </main>
+
+    <script src="./js/app.js"></script>
 </body>
 </html>
